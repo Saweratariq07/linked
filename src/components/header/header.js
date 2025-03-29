@@ -1,8 +1,8 @@
 import { Container, Flex, Button, Box } from 'theme-ui';
-import { keyframes } from '@emotion/react'
+import { keyframes } from '@emotion/react';
 import { Link } from 'react-scroll';
 import Logo from 'components/logo';
-import LogoDark from 'assets/logo.svg';
+import LogoDark from 'assets/logo.png';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
@@ -12,8 +12,12 @@ export default function Header({ className }) {
     <DrawerProvider>
       <Box sx={styles.header} className={className} id="header">
         <Container sx={styles.container}>
-          <Logo src={LogoDark} />
+          {/* Logo */}
+          <Box sx={styles.logoContainer}>
+            <Logo src={LogoDark} />
+          </Box>
 
+          {/* Navigation Menu */}
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, i) => (
               <Link
@@ -30,6 +34,7 @@ export default function Header({ className }) {
             ))}
           </Flex>
 
+          {/* Get Started Button */}
           <Button
             className="donate__btn"
             variant="secondary"
@@ -38,6 +43,7 @@ export default function Header({ className }) {
             Get Started
           </Button>
 
+          {/* Mobile Drawer */}
           <MobileDrawer />
         </Container>
       </Box>
@@ -50,7 +56,6 @@ const positionAnim = keyframes`
     position: fixed;
     opacity: 1;
   }
-
   to {
     position: absolute;
     opacity: 1;
@@ -62,7 +67,7 @@ const styles = {
   header: {
     color: 'text',
     fontWeight: 'body',
-    py: 4,
+    py: 2, // Reduced navbar height
     width: '100%',
     position: 'absolute',
     top: 0,
@@ -80,8 +85,8 @@ const styles = {
       backgroundColor: 'background',
       color: '#000000',
       boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
-      py: 3,
-      'nev > a': {
+      py: 2, // Reduced height in sticky mode too
+      'nav > a': {
         color: 'text',
       },
     },
@@ -90,6 +95,15 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  logoContainer: {
+    img: {
+      width: '150px', // Increased logo size
+      height: 'auto',
+      p: 0,
+      m: 0,
+      display: 'block',
+    },
   },
   nav: {
     mx: 'auto',
@@ -100,7 +114,7 @@ const styles = {
     a: {
       fontSize: 2,
       fontWeight: 'body',
-      px: 5,
+      px: 4,
       cursor: 'pointer',
       lineHeight: '1.2',
       transition: 'all 0.15s',

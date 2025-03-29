@@ -8,8 +8,7 @@ const data = {
   subTitle: 'Core features',
   title: 'Earn Passive Income with Your LinkedIn Profile – Anytime, Anywhere',
   description:'Monetize your LinkedIn account effortlessly! Rent out your profile and start earning monthly passive income without any extra work. Whether you are at home, at work, or traveling, your LinkedIn profile can work for you.',
-  btnName: 'Get Started',
-  btnURL: '#',
+  
 };
 
 export default function CoreFeature() {

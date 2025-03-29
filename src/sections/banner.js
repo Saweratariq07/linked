@@ -1,4 +1,5 @@
 import { Container, Box, Heading, Text, Button } from 'theme-ui';
+import { Link } from 'react-scroll';
 import ShapeLeft from 'assets/shape-left.png';
 import ShapeRight from 'assets/shape-right.png';
 
@@ -8,23 +9,27 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-          Rent Your LinkedIn Profile & Earn Passive Income
+            Rent Your LinkedIn Profile & Earn Passive Income
           </Heading>
-          {/* <Text as="h3" variant="heroSecondary">
-          Turn Your LinkedIn Profile Into a Passive Income Source
-          </Text> */}
           <Text as="p" variant="heroSecondary">
-          Earn passive income by renting out your active LinkedIn profile—no effort required!
+            Earn passive income by renting out your active LinkedIn profile—no effort required!
           </Text>
-          {/* 
-          <Text as="p" variant="heroSecondary">
-          We are a trusted professional company that securely rents LinkedIn accounts from verified users. Our process is safe, legal, and completely hassle-free.
-          </Text> */}
-          <Button variant="primary">List Your Account</Button>
+
+          {/* Updated Button with Link to Footer */}
+          <Button 
+            variant="primary"
+            as={Link}
+            to="footer"
+            spy={true}
+            smooth={true}
+            offset={-50} // Adjust if needed
+            duration={500}
+          >
+            List Your Account
+          </Button>
         </Box>
 
-        <Box sx={styles.banner.imageBox}>
-        </Box>
+        <Box sx={styles.banner.imageBox}></Box>
       </Container>
     </Box>
   );

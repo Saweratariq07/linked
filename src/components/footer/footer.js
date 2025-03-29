@@ -37,7 +37,7 @@ export default function Footer() {
   };
 
   return (
-    <motion.footer sx={styles.footer} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+    <motion.footer  id="footer" sx={styles.footer} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
       <Container>
         <Grid sx={styles.contactContainer}>
         <Box sx={styles.contactInfo}>
@@ -45,37 +45,43 @@ export default function Footer() {
   <Text>
     We value your interest and are here to assist you. Please feel free to contact us.
   </Text>
-  <Text>
-    <strong>LinkedIn:</strong>{' '}
-    <Link
-      href="https://www.linkedin.com/in/earn-and-secure"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Earn & Secure
-    </Link>
-  </Text>
-  <Text>
-    <strong>WhatsApp:</strong>{' '}
-    <a
-      href="https://wa.me/85259249497"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      +85259249497
-    </a>
-  </Text>
-  <Text>
-    <strong>Email:</strong>{' '}
-    <a
-      href="mailto:contact@earnandsecure.com"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      contact@earnandsecure.com
-    </a>
-  </Text>
+
+  <ul style={{ listStyleType: "none", padding: 0 }}>
+  <li style={{ marginBottom: "10px" }}>
+      <strong>📢 Telegram: </strong>
+      <a
+        href="https://t.me/LinkedIn_99"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        https://t.me/LinkedIn_99
+      </a>
+    </li>
+
+    <li style={{ marginBottom: "10px" }}>
+      <strong>📱 WhatsApp: </strong>
+      <a
+        href="https://wa.me/85259249497"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        +85259249497
+      </a>
+    </li>
+
+    <li>
+      <strong>📧 Email: </strong>
+      <a
+        href="mailto:mastersderonnzshdauc@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        mastersderonnzshdauc@gmail.com
+      </a>
+    </li>
+  </ul>
 </Box>
+
 
 
           <motion.Box sx={styles.contactForm} initial={{ x: 50 }} animate={{ x: 0 }} transition={{ type: "spring", stiffness: 120 }}>

@@ -45,7 +45,7 @@ export default function KeyFeature() {
         {/* About Us Section */}
         <Box sx={styles.aboutUs}>
           <SectionHeader slogan="About Us" title="Your Trusted LinkedIn Leasing Partner" />
-          <p>At [Your Company Name], we specialize in secure and ethical LinkedIn profile rentals. 
+          <p>At Heidrick & Struggles LinkedIn, we specialize in secure and ethical LinkedIn profile rentals. 
           We have helped hundreds of professionals earn passive income by safely renting out their LinkedIn accounts.</p>
         </Box>
 
@@ -58,9 +58,7 @@ export default function KeyFeature() {
             <li>✔ 100% Confidential & Secure – We ensure ethical usage and keep your data safe.</li>
             <li>✔ Fast Approvals & Hassle-Free Process – No complex steps, just easy earnings.</li>
           </ul>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} style={{ textAlign: 'center', marginTop: '20px' }}>
-            <a href="#apply" sx={styles.button}>Join Now</a>
-          </motion.div>
+         
         </Box>
 
         {/* How It Works Section */}
